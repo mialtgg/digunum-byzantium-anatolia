@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Home",
+    "map": "Map View",
+    "coins": {
+      "title": "Byzantine Coins",
+      "gold": "Gold Coins",
+      "silver": "Silver Coins",
+      "bronze": "Bronze Coins"
+    },
+    "seals": {
+      "title": "Byzantine Seals",
+      "lead": "Lead Seals",
+      "other": "Other Seals"
+    },
+    "publications": "Publications",
+    "about": "About Us",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "vr": {
+    "button": "Go VR Museum"
+  }
+} 

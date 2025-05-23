@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "map": "Harita Görünümü",
+    "coins": {
+      "title": "Bizans Sikkeleri",
+      "gold": "Altın Sikkeler",
+      "silver": "Gümüş Sikkeler",
+      "bronze": "Bronz Sikkeler"
+    },
+    "seals": {
+      "title": "Bizans Mühürleri",
+      "lead": "Kurşun Mühürler",
+      "other": "Diğer Mühürler"
+    },
+    "publications": "Yayınlar",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "admin": "Yönetici"
+  },
+  "vr": {
+    "button": "VR Müzesine Git"
+  }
+} 
