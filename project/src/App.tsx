@@ -26,7 +26,7 @@ function App() {
         <SealProvider>
           <EmperorProvider>
             <Router>
-              <div className="min-h-screen bg-amber-50">
+              <div className="min-h-screen bg-orange-50">
                 <Navigation />
                 <main>
                   <Routes>

@@ -348,7 +348,7 @@ const AdminPage: React.FC = () => {
           {!showForm && (
             <button
               onClick={() => setShowForm(true)}
-              className="px-4 py-2 text-sm font-medium text-white bg-amber-600 rounded-md hover:bg-amber-700"
+              className="px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-500"
             >
               {activeTab === 'coins' ? 'Para Ekle' : activeTab === 'seals' ? 'Mühür Ekle' : 'Yayın Ekle'}
             </button>
@@ -363,7 +363,7 @@ const AdminPage: React.FC = () => {
                   onClick={() => setActiveTab('coins')}
                   className={`${
                     activeTab === 'coins'
-                      ? 'border-amber-500 text-amber-600'
+                      ? 'border-orange-500 text-orange-500'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}
                 >
@@ -373,7 +373,7 @@ const AdminPage: React.FC = () => {
                   onClick={() => setActiveTab('seals')}
                   className={`${
                     activeTab === 'seals'
-                      ? 'border-amber-500 text-amber-600'
+                      ? 'border-orange-500 text-orange-500'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}
                 >
@@ -383,7 +383,7 @@ const AdminPage: React.FC = () => {
                   onClick={() => setActiveTab('publications')}
                   className={`${
                     activeTab === 'publications'
-                      ? 'border-amber-500 text-amber-600'
+                      ? 'border-orange-500 text-orange-500'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}
                 >

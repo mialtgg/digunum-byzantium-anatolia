@@ -70,7 +70,7 @@ const PublicationsPage: React.FC = () => {
                     {publication.keywords.map((keyword, index) => (
                       <span
                         key={index}
-                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800"
+                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-500"
                       >
                         {keyword}
                       </span>
@@ -84,7 +84,7 @@ const PublicationsPage: React.FC = () => {
                   href={publication.pdfUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-amber-600 hover:text-amber-800"
+                  className="inline-flex items-center text-orange-500 hover:text-orange-500"
                 >
                   <span>View PDF</span>
                   <ExternalLink className="ml-1 w-4 h-4" />

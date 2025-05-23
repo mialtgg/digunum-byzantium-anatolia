@@ -8,7 +8,7 @@ const MapPage: React.FC = () => {
   const { selectedCoin } = useCoins();
 
   return (
-    <div className="relative h-[calc(100vh-5rem)] border-t border-amber-600/30 shadow-sm">
+    <div className="relative h-[calc(100vh-5rem)] border-t border-orange-500/30 shadow-sm">
       <div className="absolute inset-0">
         <CoinMap />
       </div>

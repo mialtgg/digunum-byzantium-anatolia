@@ -6,7 +6,7 @@ const CoinGallery: React.FC = () => {
 
   return (
     <div className="mt-8">
-      <h2 className="text-2xl font-serif font-bold text-purple-900 mb-4">Coin Collection</h2>
+      <h2 className="text-2xl font-serif font-bold text-orange-500 mb-4">Coin Collection</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {coins.map((coin) => (
           <div 
@@ -22,13 +22,13 @@ const CoinGallery: React.FC = () => {
               />
             </div>
             <div className="p-4">
-              <h3 className="font-serif font-bold text-purple-900">{coin.name}</h3>
-              <p className="text-sm text-amber-700">{coin.period}</p>
+              <h3 className="font-serif font-bold text-orange-500">{coin.name}</h3>
+              <p className="text-sm text-orange-500">{coin.period}</p>
               <p className="text-sm text-gray-600">{coin.year}</p>
               <p className="text-sm text-gray-500 mt-1">{coin.location.name}</p>
               <p className="text-xs text-gray-600 mt-2 line-clamp-2">{coin.description}</p>
               <button 
-                className="mt-3 text-sm bg-amber-500 hover:bg-amber-600 text-white px-3 py-1 rounded-full transition-colors"
+                className="mt-3 text-sm bg-orange-500 hover:bg-orange-500 text-white px-3 py-1 rounded-full transition-colors"
               >
                 View Details
               </button>

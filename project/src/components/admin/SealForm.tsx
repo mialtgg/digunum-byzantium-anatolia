@@ -78,7 +78,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
           required
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
         />
       </div>
 
@@ -89,7 +89,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             type="text"
             value={formData.period}
             onChange={(e) => setFormData({ ...formData, period: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -98,7 +98,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             type="text"
             value={formData.year}
             onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
       </div>
@@ -109,7 +109,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
           value={formData.description}
           onChange={(e) => setFormData({ ...formData, description: e.target.value })}
           rows={3}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
         />
       </div>
 
@@ -119,7 +119,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
           type="url"
           value={formData.imageUrl}
           onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
         />
       </div>
 
@@ -131,7 +131,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             step="any"
             value={formData.location?.lat}
             onChange={(e) => handleLocationChange('lat', e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -141,7 +141,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             step="any"
             value={formData.location?.lng}
             onChange={(e) => handleLocationChange('lng', e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -150,7 +150,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             type="text"
             value={formData.location?.name}
             onChange={(e) => handleLocationChange('name', e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
       </div>
@@ -162,7 +162,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             type="text"
             value={formData.material}
             onChange={(e) => setFormData({ ...formData, material: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -171,7 +171,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             type="text"
             value={formData.type}
             onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -180,7 +180,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             type="text"
             value={formData.owner}
             onChange={(e) => setFormData({ ...formData, owner: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
       </div>
@@ -191,7 +191,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
           value={formData.inscription}
           onChange={(e) => setFormData({ ...formData, inscription: e.target.value })}
           rows={2}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
         />
       </div>
 
@@ -203,7 +203,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             step="0.1"
             value={formData.dimensions?.length}
             onChange={(e) => handleDimensionChange('length', e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -213,7 +213,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             step="0.1"
             value={formData.dimensions?.width}
             onChange={(e) => handleDimensionChange('width', e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -223,7 +223,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
             step="0.1"
             value={formData.dimensions?.thickness}
             onChange={(e) => handleDimensionChange('thickness', e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
       </div>
@@ -238,7 +238,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
         </button>
         <button
           type="submit"
-          className="px-4 py-2 text-sm font-medium text-white bg-amber-600 border border-transparent rounded-md hover:bg-amber-700"
+          className="px-4 py-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-500"
         >
           {seal ? 'Güncelle' : 'Ekle'}
         </button>

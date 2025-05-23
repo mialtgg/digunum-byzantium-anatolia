@@ -44,19 +44,19 @@ const Navigation: React.FC = () => {
             <div className="flex items-center justify-center flex-1 space-x-4">
               <Link 
                 to="/" 
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-amber-600 transition-colors"
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-orange-500 transition-colors"
               >
                 <span>{t('nav.home')}</span>
               </Link>
               <Link 
                 to="/map" 
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-amber-600 transition-colors"
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-orange-500 transition-colors"
               >
                 <Map className="h-5 w-5 mr-1" />
                 <span>{t('nav.map')}</span>
               </Link>
               <div className="relative group">
-                <button className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-amber-600 transition-colors focus:outline-none">
+                <button className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-orange-500 transition-colors focus:outline-none">
                   {t('nav.coins.title')}
                   <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                 </button>
@@ -67,7 +67,7 @@ const Navigation: React.FC = () => {
                 </div>
               </div>
               <div className="relative group">
-                <button className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-amber-600 transition-colors focus:outline-none">
+                <button className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-orange-500 transition-colors focus:outline-none">
                   {t('nav.seals.title')}
                   <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                 </button>
@@ -78,7 +78,7 @@ const Navigation: React.FC = () => {
               </div>
               <Link 
                 to="/publications" 
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-amber-600 transition-colors"
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-300 hover:text-orange-500 transition-colors"
               >
                 {t('nav.publications')}
               </Link>
@@ -86,7 +86,7 @@ const Navigation: React.FC = () => {
             <div className="flex items-center">
               <Link 
                 to="/admin" 
-                className="px-3 py-2 rounded-md text-sm font-medium bg-amber-600 hover:bg-amber-700 text-white transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium bg-orange-500 hover:bg-orange-500 text-white transition-colors"
               >
                 {t('nav.admin')}
               </Link>

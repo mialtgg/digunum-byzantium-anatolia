@@ -34,7 +34,7 @@ const CoinDetails: React.FC = () => {
         
         <div className="flex flex-col md:flex-row">
           {/* Coin image with navigation */}
-          <div className="md:w-1/2 p-4 bg-amber-50 relative">
+          <div className="md:w-1/2 p-4 bg-orange-50 relative">
             <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
               <img 
                 src={selectedCoin.imageUrl} 

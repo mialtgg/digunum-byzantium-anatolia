@@ -88,7 +88,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
           required
           value={formData.title}
           onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
         />
       </div>
 
@@ -101,7 +101,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
                 type="text"
                 value={author}
                 onChange={(e) => handleAuthorChange(index, e.target.value)}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
               />
               <button
                 type="button"
@@ -115,7 +115,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
           <button
             type="button"
             onClick={addAuthor}
-            className="text-sm text-amber-600 hover:text-amber-800"
+            className="text-sm text-orange-500 hover:text-orange-500"
           >
             + {t('publication.addAuthor')}
           </button>
@@ -130,7 +130,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
             required
             value={formData.year}
             onChange={(e) => setFormData({ ...formData, year: parseInt(e.target.value) })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -140,7 +140,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
             required
             value={formData.journal}
             onChange={(e) => setFormData({ ...formData, journal: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
       </div>
@@ -152,7 +152,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
             type="text"
             value={formData.volume}
             onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -161,7 +161,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
             type="text"
             value={formData.issue}
             onChange={(e) => setFormData({ ...formData, issue: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
@@ -170,7 +170,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
             type="text"
             value={formData.pages}
             onChange={(e) => setFormData({ ...formData, pages: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
       </div>
@@ -181,7 +181,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
           type="text"
           value={formData.doi}
           onChange={(e) => setFormData({ ...formData, doi: e.target.value })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
         />
       </div>
 
@@ -191,7 +191,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
           value={formData.abstract}
           onChange={(e) => setFormData({ ...formData, abstract: e.target.value })}
           rows={4}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
         />
       </div>
 
@@ -204,7 +204,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
                 type="text"
                 value={keyword}
                 onChange={(e) => handleKeywordChange(index, e.target.value)}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
               />
               <button
                 type="button"
@@ -218,7 +218,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
           <button
             type="button"
             onClick={addKeyword}
-            className="text-sm text-amber-600 hover:text-amber-800"
+            className="text-sm text-orange-500 hover:text-orange-500"
           >
             + {t('publication.addKeyword')}
           </button>
@@ -231,7 +231,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
           type="url"
           value={formData.pdfUrl}
           onChange={(e) => setFormData({ ...formData, pdfUrl: e.target.value })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
         />
       </div>
 
@@ -245,7 +245,7 @@ const PublicationForm: React.FC<PublicationFormProps> = ({ publication, onClose 
         </button>
         <button
           type="submit"
-          className="px-4 py-2 text-sm font-medium text-white bg-amber-600 border border-transparent rounded-md hover:bg-amber-700"
+          className="px-4 py-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-500"
         >
           {publication ? 'Güncelle' : 'Ekle'}
         </button>
