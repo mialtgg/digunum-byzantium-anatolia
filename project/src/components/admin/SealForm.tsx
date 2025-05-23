@@ -8,8 +8,20 @@ interface SealFormProps {
   onClose: () => void;
 }
 
+interface Location {
+  lat: number;
+  lng: number;
+  name: string;
+}
+
+interface Dimensions {
+  length: number;
+  width: number;
+  thickness: number;
+}
+
 const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
-  const { addSeal, updateSeal } = useSeals();
+  const { addSeal } = useSeals();
   const { t } = useTranslation();
   const [formData, setFormData] = useState<Partial<Seal>>(
     seal || {
@@ -38,11 +50,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      if (seal) {
-        await updateSeal(seal.id, formData);
-      } else {
-        await addSeal(formData as Seal);
-      }
+      await addSeal(formData as Seal);
       onClose();
     } catch (error) {
       console.error('Error saving seal:', error);
@@ -53,7 +61,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
     setFormData(prev => ({
       ...prev,
       location: {
-        ...prev.location!,
+        ...(prev.location as Location),
         [field]: field === 'lat' || field === 'lng' ? Number(value) : value
       }
     }));
@@ -63,7 +71,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
     setFormData(prev => ({
       ...prev,
       dimensions: {
-        ...prev.dimensions!,
+        ...(prev.dimensions as Dimensions),
         [field]: Number(value)
       }
     }));
@@ -72,7 +80,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700">İsim</label>
+        <label className="block text-sm font-medium text-gray-700">Name</label>
         <input
           type="text"
           required
@@ -84,7 +92,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700">Dönem</label>
+          <label className="block text-sm font-medium text-gray-700">Period</label>
           <input
             type="text"
             value={formData.period}
@@ -93,7 +101,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Yıl</label>
+          <label className="block text-sm font-medium text-gray-700">Year</label>
           <input
             type="text"
             value={formData.year}
@@ -104,7 +112,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700">Açıklama</label>
+        <label className="block text-sm font-medium text-gray-700">Description</label>
         <textarea
           value={formData.description}
           onChange={(e) => setFormData({ ...formData, description: e.target.value })}
@@ -114,7 +122,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700">Görsel URL</label>
+        <label className="block text-sm font-medium text-gray-700">Image URL</label>
         <input
           type="url"
           value={formData.imageUrl}
@@ -125,30 +133,30 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
 
       <div className="grid grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700">Enlem</label>
+          <label className="block text-sm font-medium text-gray-700">Latitude</label>
           <input
             type="number"
             step="any"
-            value={formData.location?.lat}
+            value={(formData.location as Location)?.lat}
             onChange={(e) => handleLocationChange('lat', e.target.value)}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Boylam</label>
+          <label className="block text-sm font-medium text-gray-700">Longitude</label>
           <input
             type="number"
             step="any"
-            value={formData.location?.lng}
+            value={(formData.location as Location)?.lng}
             onChange={(e) => handleLocationChange('lng', e.target.value)}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Konum Adı</label>
+          <label className="block text-sm font-medium text-gray-700">Location Name</label>
           <input
             type="text"
-            value={formData.location?.name}
+            value={(formData.location as Location)?.name}
             onChange={(e) => handleLocationChange('name', e.target.value)}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
@@ -157,7 +165,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
 
       <div className="grid grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700">Malzeme</label>
+          <label className="block text-sm font-medium text-gray-700">Material</label>
           <input
             type="text"
             value={formData.material}
@@ -166,7 +174,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Tür</label>
+          <label className="block text-sm font-medium text-gray-700">Type</label>
           <input
             type="text"
             value={formData.type}
@@ -175,7 +183,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Sahibi</label>
+          <label className="block text-sm font-medium text-gray-700">Owner</label>
           <input
             type="text"
             value={formData.owner}
@@ -186,7 +194,7 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700">Yazıt</label>
+        <label className="block text-sm font-medium text-gray-700">Inscription</label>
         <textarea
           value={formData.inscription}
           onChange={(e) => setFormData({ ...formData, inscription: e.target.value })}
@@ -197,31 +205,31 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
 
       <div className="grid grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700">Uzunluk (mm)</label>
+          <label className="block text-sm font-medium text-gray-700">Length (mm)</label>
           <input
             type="number"
             step="0.1"
-            value={formData.dimensions?.length}
+            value={(formData.dimensions as Dimensions)?.length}
             onChange={(e) => handleDimensionChange('length', e.target.value)}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Genişlik (mm)</label>
+          <label className="block text-sm font-medium text-gray-700">Width (mm)</label>
           <input
             type="number"
             step="0.1"
-            value={formData.dimensions?.width}
+            value={(formData.dimensions as Dimensions)?.width}
             onChange={(e) => handleDimensionChange('width', e.target.value)}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Kalınlık (mm)</label>
+          <label className="block text-sm font-medium text-gray-700">Thickness (mm)</label>
           <input
             type="number"
             step="0.1"
-            value={formData.dimensions?.thickness}
+            value={(formData.dimensions as Dimensions)?.thickness}
             onChange={(e) => handleDimensionChange('thickness', e.target.value)}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
           />
@@ -234,13 +242,13 @@ const SealForm: React.FC<SealFormProps> = ({ seal, onClose }) => {
           onClick={onClose}
           className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
         >
-          İptal
+          Cancel
         </button>
         <button
           type="submit"
           className="px-4 py-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md hover:bg-orange-500"
         >
-          {seal ? 'Güncelle' : 'Ekle'}
+          {seal ? 'Update' : 'Add'}
         </button>
       </div>
     </form>
